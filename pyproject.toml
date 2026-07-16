@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgepack"
+version = "0.1.0"
+description = "Federated on-device RAG with encrypted vector search, budget-aware model routing, 4-bit quantization workflow (MLX/Core ML), and edge MLOps"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy>=1.24",
+    "cryptography>=41",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+apple = ["mlx-lm>=0.15", "coremltools>=7.2"]
+
+[tool.setuptools.packages.find]
+include = ["edgepack*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

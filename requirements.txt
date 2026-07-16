@@ -1,0 +1,6 @@
+numpy>=1.24
+cryptography>=41
+pytest>=7
+# Apple Silicon only (quantization real-run):
+# mlx-lm>=0.15
+# coremltools>=7.2
